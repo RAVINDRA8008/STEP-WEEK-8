@@ -156,3 +156,65 @@ WHERE total_cost > 400;
   - The `>` operator checks for values strictly greater than 400.
 
 ---
+---
+
+### Topic 3: SELECT with WHERE using AND/OR
+---
+
+#### Lab 3.1 – Task
+**Show details where movie ID is 3 and the show datetime is after '2025-04-20'.**
+
+#### Question
+Write an SQL query to retrieve all details from the `show` table where the `movie_id` is 3 and the `show_datetime` is after '2025-04-20'.
+
+#### Answer
+```sql
+SELECT *
+FROM show
+WHERE movie_id = 3 AND show_datetime > '2025-04-20';
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `show` table.
+
+- **`FROM show`**  
+  Specifies that the data is being fetched from the `show` table.
+
+- **`WHERE movie_id = 3 AND show_datetime > '2025-04-20'`**  
+  - The condition checks two things:  
+    - `movie_id = 3` ensures that only rows with `movie_id` equal to 3 are included.
+    - `show_datetime > '2025-04-20'` ensures that only shows after April 20th, 2025, are included.
+  - The `AND` operator is used to combine these two conditions, meaning both conditions must be true for a row to be included.
+
+---
+
+#### Lab 3.2 – Task
+**List all bookings where the total cost is more than ₹500 OR the booking was made after '2025-04-01'.**
+
+#### Question
+Write an SQL query to retrieve all bookings where the `total_cost` is more than ₹500 or the `booking_datetime` is after '2025-04-01'.
+
+#### Answer
+```sql
+SELECT *
+FROM booking
+WHERE total_cost > 500 OR booking_datetime > '2025-04-01';
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `booking` table.
+
+- **`FROM booking`**  
+  Specifies that the data is being fetched from the `booking` table.
+
+- **`WHERE total_cost > 500 OR booking_datetime > '2025-04-01'`**  
+  - This condition includes rows where either:
+    - The `total_cost` is greater than ₹500, or
+    - The `booking_datetime` is later than April 1st, 2025.
+  - The `OR` operator is used here, meaning if either of the conditions is true, the row will be included.
+
+---
