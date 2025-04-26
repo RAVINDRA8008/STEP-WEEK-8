@@ -128,3 +128,31 @@ WHERE rating > 4.0;
   - The `>` operator checks for values strictly greater than 4.0.
 
 ---
+---
+
+#### Lab 2.2 – Task
+**List all bookings where the total amount is greater than ₹400.**
+
+#### Question
+Write an SQL query to get the `booking_id`, `user_id`, and `total_cost` for bookings where the total amount exceeds ₹400.
+
+#### Answer
+```sql
+SELECT booking_id, user_id, total_cost
+FROM booking
+WHERE total_cost > 400;
+```
+
+#### Explanation
+
+- **`SELECT booking_id, user_id, total_cost`**  
+  Retrieves the `booking_id`, `user_id`, and `total_cost` columns from the `booking` table.
+
+- **`FROM booking`**  
+  Indicates that the data is being fetched from the `booking` table.
+
+- **`WHERE total_cost > 400`**  
+  - Filters the records to include only those where the `total_cost` is greater than 400.
+  - The `>` operator checks for values strictly greater than 400.
+
+---
