@@ -275,3 +275,60 @@ WHERE status != 'Inactive';
   - This condition retrieves all rows where the `status` is not equal to `'Inactive'`.
 
 ---
+---
+
+### Topic 5: SELECT with WHERE and BETWEEN
+
+#### Lab 5.1 – Task
+**List all food sizes where the rate is between 150 and 300.**
+
+#### Question
+Write an SQL query to retrieve all food item sizes where the `rate` falls between 150 and 300.
+
+#### Answer
+```sql
+SELECT *
+FROM FoodItemSize
+WHERE rate BETWEEN 150 AND 300;
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `FoodItemSize` table.
+
+- **`FROM FoodItemSize`**  
+  Specifies that the data is being fetched from the `FoodItemSize` table.
+
+- **`WHERE rate BETWEEN 150 AND 300`**  
+  - The `BETWEEN` operator checks if the `rate` is within the specified range (inclusive of 150 and 300).
+  - This retrieves all records where the `rate` is greater than or equal to 150 and less than or equal to 300.
+
+---
+
+#### Lab 5.2 – Task
+**Get all ticket bookings between '2025-04-01' and '2025-04-10'.**
+---
+#### Question
+Write an SQL query to retrieve all bookings made between '2025-04-01' and '2025-04-10'.
+
+#### Answer
+```sql
+SELECT *
+FROM booking
+WHERE booking_datetime BETWEEN '2025-04-01' AND '2025-04-10 23:59:59';
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `booking` table.
+
+- **`FROM booking`**  
+  Specifies that the data is being fetched from the `booking` table.
+
+- **`WHERE booking_datetime BETWEEN '2025-04-01' AND '2025-04-10 23:59:59'`**  
+  - The `BETWEEN` operator checks if `booking_datetime` falls within the specified range.
+  - It includes all bookings from the start of April 1st, 2025, up to the very end of April 10th, 2025 (`23:59:59`).
+
+---
