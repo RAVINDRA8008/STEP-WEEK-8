@@ -36,4 +36,33 @@ WHERE name LIKE 'S%';
   - `%` is a wildcard character that matches any sequence of characters after **S**.
 
 ---
+---
+
+#### Lab 1.2 – Task
+**Retrieve all movies where the genre is 'Comedy'.**
+
+#### Question
+Write an SQL query to get all movies with the genre 'Comedy'.
+
+#### Answer
+```sql
+SELECT *
+FROM movie
+WHERE genre = 'Comedy';
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns (fields) from the table.
+
+- **`FROM movie`**  
+  Specifies that the data is being selected from the `movie` table.
+
+- **`WHERE genre = 'Comedy'`**  
+  - `WHERE` filters the rows based on a condition.
+  - `genre = 'Comedy'` means only the rows where the genre is exactly 'Comedy' will be retrieved.
+  - The condition must match exactly, including letter casing (depending on the database settings).
+
+---
 
