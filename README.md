@@ -337,7 +337,7 @@ WHERE booking_datetime BETWEEN '2025-04-01' AND '2025-04-10 23:59:59';
 ---
 
 ### Topic 6: SELECT with WHERE and IN
-
+---
 #### Lab 6.1 – Task
 **Display food items whose names are either 'Vintage Cola', 'Sweet & Salty Popcorn', or 'Fiesta Nachos'.**
 
@@ -394,8 +394,68 @@ WHERE user_id IN (101, 103, 105);
 ---
 ---
 
-### Topic 8: SELECT with ORDER BY (ASC/DESC)
+---
 
+### Topic 7: SELECT with WHERE and LIKE
+---
+#### Lab 7.1 – Task
+**Retrieve all user emails that contain the word 'yahoo'.**
+
+#### Question
+Write an SQL query to retrieve all user emails that have the word 'yahoo' anywhere in the email address.
+
+#### Answer
+```sql
+SELECT email
+FROM user
+WHERE email LIKE '%yahoo%';
+```
+
+#### Explanation
+
+- **`SELECT email`**  
+  Retrieves only the `email` column from the `user` table.
+
+- **`FROM user`**  
+  Specifies that the data is being fetched from the `user` table.
+
+- **`WHERE email LIKE '%yahoo%'`**  
+  - The `LIKE` operator is used for pattern matching.
+  - `%` is a wildcard that matches any sequence of characters.
+  - `%yahoo%` means 'yahoo' can appear anywhere within the email address.
+
+---
+
+#### Lab 7.2 – Task
+**Find all movies whose titles start with the letter 'T'.**
+
+#### Question
+Write an SQL query to retrieve all movie titles that begin with the letter 'T'.
+
+#### Answer
+```sql
+SELECT title
+FROM Movie
+WHERE title LIKE 'T%';
+```
+
+#### Explanation
+
+- **`SELECT title`**  
+  Retrieves only the `title` column from the `Movie` table.
+
+- **`FROM Movie`**  
+  Specifies that the data is being fetched from the `Movie` table.
+
+- **`WHERE title LIKE 'T%'`**  
+  - The `LIKE` operator is used for pattern matching.
+  - `'T%'` means the title must start with the letter 'T', followed by any sequence of characters.
+
+---
+---
+
+### Topic 8: SELECT with ORDER BY (ASC/DESC)
+---
 #### Lab 8.1 – Task
 **List all movies ordered by their rating in descending order.**
 
@@ -453,7 +513,7 @@ ORDER BY show_datetime ASC;
 ---
 
 ### Topic 9: SELECT with ALIAS (column and table aliases)
-
+---
 #### Lab 9.1 – Task
 **Get the names and ratings of movies, but label the rating as 'Movie Rating'.**
 
