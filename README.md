@@ -189,6 +189,7 @@ WHERE movie_id = 3 AND show_datetime > '2025-04-20';
   - The `AND` operator is used to combine these two conditions, meaning both conditions must be true for a row to be included.
 
 ---
+---
 
 #### Lab 3.2 – Task
 **List all bookings where the total cost is more than ₹500 OR the booking was made after '2025-04-01'.**
@@ -305,10 +306,11 @@ WHERE rate BETWEEN 150 AND 300;
   - This retrieves all records where the `rate` is greater than or equal to 150 and less than or equal to 300.
 
 ---
+---
 
 #### Lab 5.2 – Task
 **Get all ticket bookings between '2025-04-01' and '2025-04-10'.**
----
+
 #### Question
 Write an SQL query to retrieve all bookings made between '2025-04-01' and '2025-04-10'.
 
