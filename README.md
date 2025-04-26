@@ -392,3 +392,110 @@ WHERE user_id IN (101, 103, 105);
   - Only bookings made by users with IDs 101, 103, or 105 will be retrieved.
 
 ---
+---
+
+### Topic 8: SELECT with ORDER BY (ASC/DESC)
+
+#### Lab 8.1 – Task
+**List all movies ordered by their rating in descending order.**
+
+#### Question
+Write an SQL query to retrieve all movies sorted by their rating from highest to lowest.
+
+#### Answer
+```sql
+SELECT *
+FROM movie
+ORDER BY rating DESC;
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Retrieves all columns from the `movie` table.
+
+- **`FROM movie`**  
+  Specifies that the data is being fetched from the `movie` table.
+
+- **`ORDER BY rating DESC`**  
+  - Orders the result set based on the `rating` column.
+  - `DESC` (Descending) means the highest ratings will appear first.
+
+---
+---
+
+#### Lab 8.2 – Task
+**List all shows ordered by `show_datetime` in ascending order.**
+
+#### Question
+Write an SQL query to retrieve all shows sorted by `show_datetime` from earliest to latest.
+
+#### Answer
+```sql
+SELECT *
+FROM show
+ORDER BY show_datetime ASC;
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Retrieves all columns from the `show` table.
+
+- **`FROM show`**  
+  Specifies that the data is being fetched from the `show` table.
+
+- **`ORDER BY show_datetime ASC`**  
+  - Orders the result set based on the `show_datetime` column.
+  - `ASC` (Ascending) means earlier dates and times will appear first.
+
+---
+---
+
+### Topic 9: SELECT with ALIAS (column and table aliases)
+
+#### Lab 9.1 – Task
+**Get the names and ratings of movies, but label the rating as 'Movie Rating'.**
+
+#### Question
+Write an SQL query to retrieve movie titles and ratings, with the rating column renamed as "Movie Rating".
+
+#### Answer
+```sql
+SELECT title, rating AS "Movie Rating"
+FROM Movie;
+```
+
+#### Explanation
+
+- **`SELECT title, rating AS "Movie Rating"`**  
+  - Retrieves the `title` column as it is.
+  - Renames the `rating` column as "Movie Rating" using the `AS` keyword for better readability in the output.
+
+- **`FROM Movie`**  
+  Specifies that the data is being fetched from the `Movie` table.
+
+---
+---
+#### Lab 9.2 – Task
+**Show screen names and their types, but alias `class_type` as "Screen Class".**
+
+#### Question
+Write an SQL query to retrieve screen names and types, with `class_type` renamed as "Screen Class".
+
+#### Answer
+```sql
+SELECT name, class_type AS "Screen Class"
+FROM Screen;
+```
+
+#### Explanation
+
+- **`SELECT name, class_type AS "Screen Class"`**  
+  - Retrieves the `name` column as it is.
+  - Renames the `class_type` column as "Screen Class" using the `AS` keyword.
+
+- **`FROM Screen`**  
+  Specifies that the data is being fetched from the `Screen` table.
+
+---
