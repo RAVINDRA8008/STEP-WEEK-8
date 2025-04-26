@@ -278,7 +278,7 @@ WHERE status != 'Inactive';
 ---
 
 ### Topic 5: SELECT with WHERE and BETWEEN
-
+---
 #### Lab 5.1 – Task
 **List all food sizes where the rate is between 150 and 300.**
 
