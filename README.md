@@ -218,3 +218,60 @@ WHERE total_cost > 500 OR booking_datetime > '2025-04-01';
   - The `OR` operator is used here, meaning if either of the conditions is true, the row will be included.
 
 ---
+---
+
+### Topic 4: SELECT with WHERE and NOT
+---
+#### Lab 4.1 – Task
+**Show all food items which are not combos.**
+
+#### Question
+Write an SQL query to retrieve all food items that are not combos.
+
+#### Answer
+```sql
+SELECT *
+FROM fooditem
+WHERE NOT is_combo = 'TRUE';
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `fooditem` table.
+
+- **`FROM fooditem`**  
+  Specifies that the data is being fetched from the `fooditem` table.
+
+- **`WHERE NOT is_combo = 'TRUE'`**  
+  - The `NOT` operator negates the condition. It selects rows where the value of `is_combo` is **not** equal to `'TRUE'`.
+  - This effectively retrieves all food items that are not considered combos.
+
+---
+
+#### Lab 4.2 – Task
+**Get all movie details that are not in status 'Inactive'.**
+
+#### Question
+Write an SQL query to retrieve all movie details where the status is not 'Inactive'.
+
+#### Answer
+```sql
+SELECT *
+FROM movie
+WHERE status != 'Inactive';
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `movie` table.
+
+- **`FROM movie`**  
+  Specifies that the data is being fetched from the `movie` table.
+
+- **`WHERE status != 'Inactive'`**  
+  - The `!=` operator checks for inequality.
+  - This condition retrieves all rows where the `status` is not equal to `'Inactive'`.
+
+---
