@@ -95,3 +95,36 @@ WHERE user_id = 102;
   - Only bookings made by user 102 will be shown.
 
 ---
+---
+
+### Topic 2: SELECT with WHERE using Operators (=, >, <, !=)
+
+---
+
+
+#### Lab 2.1 – Task
+**List all movie names where the rating is greater than 4.0.**
+
+#### Question
+Write an SQL query to retrieve all movie titles with a rating higher than 4.0.
+
+#### Answer
+```sql
+SELECT title
+FROM movie
+WHERE rating > 4.0;
+```
+
+#### Explanation
+
+- **`SELECT title`**  
+  Retrieves only the `title` column from the result set (i.e., the names of the movies).
+
+- **`FROM movie`**  
+  Specifies that the data should come from the `movie` table.
+
+- **`WHERE rating > 4.0`**  
+  - Filters the rows to only include movies with a `rating` greater than 4.0.
+  - The `>` operator checks for values strictly greater than 4.0.
+
+---
