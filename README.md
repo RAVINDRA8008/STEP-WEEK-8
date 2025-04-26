@@ -334,3 +334,61 @@ WHERE booking_datetime BETWEEN '2025-04-01' AND '2025-04-10 23:59:59';
   - It includes all bookings from the start of April 1st, 2025, up to the very end of April 10th, 2025 (`23:59:59`).
 
 ---
+---
+
+### Topic 6: SELECT with WHERE and IN
+
+#### Lab 6.1 – Task
+**Display food items whose names are either 'Vintage Cola', 'Sweet & Salty Popcorn', or 'Fiesta Nachos'.**
+
+#### Question
+Write an SQL query to retrieve food items where the name matches any of the specified items.
+
+#### Answer
+```sql
+SELECT *
+FROM fooditem
+WHERE name IN ('Vintage Cola', 'Sweet & Salty Popcorn', 'Fiesta Nachos');
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `fooditem` table.
+
+- **`FROM fooditem`**  
+  Specifies that the data is being fetched from the `fooditem` table.
+
+- **`WHERE name IN ('Vintage Cola', 'Sweet & Salty Popcorn', 'Fiesta Nachos')`**  
+  - The `IN` operator checks if the `name` value matches any value in the provided list.
+  - Only food items with names exactly matching one of the listed names will be retrieved.
+
+---
+---
+
+#### Lab 6.2 – Task
+**List all bookings made by users with user IDs 101, 103, or 105.**
+
+#### Question
+Write an SQL query to retrieve all bookings made by users with IDs 101, 103, or 105.
+
+#### Answer
+```sql
+SELECT *
+FROM booking
+WHERE user_id IN (101, 103, 105);
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Selects all columns from the `booking` table.
+
+- **`FROM booking`**  
+  Specifies that the data is being fetched from the `booking` table.
+
+- **`WHERE user_id IN (101, 103, 105)`**  
+  - The `IN` operator checks if the `user_id` is one of the specified values.
+  - Only bookings made by users with IDs 101, 103, or 105 will be retrieved.
+
+---
