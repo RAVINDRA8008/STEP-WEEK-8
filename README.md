@@ -559,3 +559,64 @@ FROM Screen;
   Specifies that the data is being fetched from the `Screen` table.
 
 ---
+---
+
+### Topic 10: SELECT with LIMIT and OFFSET
+---
+#### Lab 10.1 – Task
+**Fetch the first 5 food items from the `fooditem` table.**
+
+#### Question
+Write an SQL query to retrieve the first 5 records from the `FoodItem` table.
+
+#### Answer
+```sql
+SELECT *
+FROM FoodItem
+LIMIT 5;
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Retrieves all columns from the `FoodItem` table.
+
+- **`FROM FoodItem`**  
+  Specifies that the data is being fetched from the `FoodItem` table.
+
+- **`LIMIT 5`**  
+  Limits the output to only the first 5 rows.
+
+---
+---
+
+#### Lab 10.2 – Task
+**Retrieve the 5 most recent bookings, skipping the latest 3.**
+
+#### Question
+Write an SQL query to retrieve 5 bookings after skipping the most recent 3, based on booking date and time.
+
+#### Answer
+```sql
+SELECT *
+FROM Booking
+ORDER BY booking_datetime DESC
+LIMIT 5 OFFSET 3;
+```
+
+#### Explanation
+
+- **`SELECT *`**  
+  Retrieves all columns from the `Booking` table.
+
+- **`FROM Booking`**  
+  Specifies that the data is being fetched from the `Booking` table.
+
+- **`ORDER BY booking_datetime DESC`**  
+  Orders the bookings from the most recent to the oldest based on `booking_datetime`.
+
+- **`LIMIT 5 OFFSET 3`**  
+  - `OFFSET 3` skips the first 3 rows (most recent bookings).
+  - `LIMIT 5` then retrieves the next 5 bookings.
+
+---
